@@ -41,4 +41,5 @@ http_1.default.createServer(function (req, res) {
     }
     res.writeHead(404);
     return res.end();
-}).listen(8080);
+}).listen(process.env.PORT || 8080);
+console.log("Listening in port " + (process.env.PORT || 8080));
